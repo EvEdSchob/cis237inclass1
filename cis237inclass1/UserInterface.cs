@@ -20,7 +20,7 @@ namespace cis237inclass1
             //Print out a menu
             printMenu();
             //Get the input from the user
-            String input = Console.ReadLine();
+            string input = Console.ReadLine();
             //While the input is not valid re-get the input
             while (input != "1" && input != "2")
             {

@@ -21,12 +21,22 @@ namespace cis237inclass1
             Employee[] employees = new Employee[10];
 
             //Put employees into the array
-            employees[0] = new Employee("Evan", "Schober", 343.00m);
-            employees[1] = new Employee("Lars", "Owen", 281.00m);
-            employees[2] = new Employee("Obi-Wan", "Kenobi", 350.00m);
-            employees[3] = new Employee("Jyn", "Urso", 750.00m);
-            employees[4] = new Employee("Cassian", "Andor", 750.00m);
-            employees[5] = new Employee("Wes", "Antilles", 150.00m);
+            //employees[0] = new Employee("Evan", "Schober", 343.00m);
+            //employees[1] = new Employee("Lars", "Owen", 281.00m);
+            //employees[2] = new Employee("Obi-Wan", "Kenobi", 350.00m);
+            //employees[3] = new Employee("Jyn", "Urso", 750.00m);
+            //employees[4] = new Employee("Cassian", "Andor", 750.00m);
+            //employees[5] = new Employee("Wes", "Antilles", 150.00m);
+
+
+            //Make the string for the path to the csv file
+            string pathToCsv = "../employees.csv";
+
+            //Instantiate the csvProcessor
+            CSVProcessor csvProcessor = new CSVProcessor();
+            //Call the ImportCSV method sending over the path and
+            //the array to store th e read in records to.
+            csvProcessor.ImportCSV(pathToCsv, employees);
 
             //Get some input from the user
             int choice = ui.GetUserInput();
